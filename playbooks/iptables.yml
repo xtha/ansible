@@ -1,0 +1,5 @@
+- hosts: z201p1c1
+  geather_facts: False
+  tasks:
+    - name: iptables -I INPUT 1 -p tcp --dport 6556 -j ACCEPT
+      cmd: iptables -I INPUT 1 -p tcp --dport 6556 -j ACCEPT

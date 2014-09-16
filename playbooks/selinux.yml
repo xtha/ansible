@@ -1,0 +1,6 @@
+- hosts: z2p201c1
+  tasks:
+    - selinux: state=disabled
+    - kernel_blacklist: name=nouveau state=present
+    - hostname: name=web01
+    - modprobe: name=dummy state=present params="numdummies=2"

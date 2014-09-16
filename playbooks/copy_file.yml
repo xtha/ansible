@@ -1,0 +1,5 @@
+- hosts: xenserver
+
+  tasks:
+    - name: copy salt pkgs for update
+      copy: src=/srv/salt/base/Linux/salt/XenServer/ dest=/tmp/

@@ -1,0 +1,15 @@
+- hosts: z2p201c1
+  tasks:
+### files sync ###
+    - name: copy yum.conf
+      copy: src=/srv/salt/base/etc/yum.conf dest=/etc/yum.conf directory_mode=yes
+    - name: copy yum.repos.d
+      copy: src=/srv/salt/base/etc/yum.conf dest=/etc/yum.conf directory_mode=yes
+### command actions ###
+### services mgmt ###
+### pkgs mgmt ###
+### system settings ###
+### system settings ###
+### networking settings ###
+### security settings ###
+### ###

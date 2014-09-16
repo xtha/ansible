@@ -1,0 +1,13 @@
+- hosts: z2p201c1
+  #vars_files:
+  #   - vars.yml
+  tasks:
+    - name: Create the directory.
+      file: state=directory path= /tmp/repos
+#      template: src=/tmp/test.j2 dest=/tmp/test
+    - copy: src=/etc/yum.repos.d dest=/tmp/repos directory_mode=yes
+    notify:
+      - restart ntpd
+    
+
+#- include: deploy.yml

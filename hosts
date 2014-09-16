@@ -1,0 +1,62 @@
+[nagios]
+nagios[01:02]  ansible_ssh_pass='gdcloud.com'
+
+[dns]
+dns[01:02] ansible_ssh_pass='gdcloud.com'
+
+[xenserver]
+xs[02:08] ansible_ssh_pass='Tianren.481~m'
+xs[51:54] ansible_ssh_pass='Tianren.131~m'
+xs226 ansible_ssh_pass='Tianren.131~m'
+xs[227:229] ansible_ssh_pass='Tianren.112~m'
+xs[201:204] ansible_ssh_pass='Tianren.141~m'
+xs[211:214] ansible_ssh_pass='Tianren.142~m'
+xs[221:224] ansible_ssh_pass='Tianren.143~m'
+xs[231:234] ansible_ssh_pass='Tianren.144~m'
+xstest[1:2] ansible_ssh_pass='Tianren.2011~m'
+xsm01
+xsm02 ansible_ssh_pass='Tianren.313~m2'
+
+####################################
+# mgmt xenserver
+####################################
+[xs-mgmt]
+xsm01
+xsm02 ansible_ssh_pass='Tianren.313~m2'
+
+####################################
+# zone 2
+####################################
+[z2p201c1]
+xstest[1:2] ansible_ssh_pass='Tianren.2011~m'
+
+[z2p1c1]
+xs[02:08] ansible_ssh_pass='Tianren.481~m'
+
+[z2p1c2]
+xs[227:229] ansible_ssh_pass='Tianren.112~m'
+
+[z2p2c1]
+xs[51:54] ansible_ssh_pass='Tianren.131~m'
+xs226 ansible_ssh_pass='Tianren.131~m'
+
+####################################
+# zone 3
+####################################
+[z3p1c1]
+xs[201:204] ansible_ssh_pass='Tianren.141~m'
+
+[z3p1c2]
+xs[211:214] ansible_ssh_pass='Tianren.142~m'
+
+[z3p1c3]
+xs[221:224] ansible_ssh_pass='Tianren.143~m'
+
+[z3p1c4]
+xs[231:234] ansible_ssh_pass='Tianren.144~m'
+
+###################################
+# cloudstack VM
+###################################
+[erp]
+SAPSRMT ansible_ssh_pass='gdcloud!.2013'

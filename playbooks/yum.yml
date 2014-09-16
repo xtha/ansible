@@ -1,0 +1,9 @@
+- hosts: erp
+  geather_facts: True
+  tasks:
+    - commands: echo "http://squid.hdtr.com:3142" >> /etc/yum.conf
+    - copy: src=/srv/salt/base/Linux/repos/RedHat/ dest=/etc/yum.repos.d/
+    - yum: pkg={{ item }} state=installed
+      with_items:
+        - lsscsi
+        - dmidecode

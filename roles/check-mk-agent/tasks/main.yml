@@ -1,0 +1,10 @@
+---
+
+- name: yum install xinetd
+  yum: name=xinetd state=installed
+
+- name: yum install check-mk-agent
+  yum: name=check-mk-agent version="{{ version }}"
+
+- name: start xinetd
+  service: name=xinetd state=restarted enabled=yes
